@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Juego Terror Juvenil</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="fade-in">
+
+<div id="menu" class="screen fade-in">
+    <h1 class="glitch" data-text="EL CUARTO VACÍO">EL CUARTO VACÍO</h1>
+    <button onclick="startGame()" class="menu-btn">Comenzar</button>
+    <button onclick="showCredits()" class="menu-btn">Créditos</button>
+</div>
+
+<div id="game" class="screen" style="display:none;">
+    <h2 class="blink">Capítulo 1 — El Pasillo</h2>
+    <img src="imagenes/placeholder.png" class="float" style="width:200px;">
+    <p id="textoHistoria">El pasillo está oscuro… alguien te observa.</p>
+    <button onclick="nextScene()" class="menu-btn">Continuar</button>
+</div>
+
+<div id="credits" class="screen" style="display:none;">
+    <h2>Créditos</h2>
+    <p>Historia basada en Tonatiuh Blancas.</p>
+    <button onclick="goMenu()" class="menu-btn">Regresar</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

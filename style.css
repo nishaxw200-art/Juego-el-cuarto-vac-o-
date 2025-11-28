@@ -1,0 +1,33 @@
+
+body { background:#000; color:white; font-family:Arial; text-align:center; }
+.menu-btn { padding:10px 20px; margin:10px; font-size:20px; background:#111; border:2px solid #fff; color:#fff; }
+.screen { margin-top:50px; }
+
+/* Animaciones existentes */
+.fade-in { opacity:0; transform:translateY(20px); animation:fadeIn 1.2s ease-out forwards;}
+@keyframes fadeIn { to { opacity:1; transform:translateY(0);} }
+
+.blink { animation: blink 0.8s infinite alternate; }
+@keyframes blink { from {opacity:1;} to {opacity:0.2;} }
+
+.float { animation: float 3s ease-in-out infinite; }
+@keyframes float { 0%,100%{transform:translateY(0);} 50%{transform:translateY(-10px);} }
+
+.jumpscare { animation: shake 0.25s linear; }
+@keyframes shake {
+0%{transform:translate(0);}
+20%{transform:translate(-10px,5px);}
+40%{transform:translate(10px,-5px);}
+60%{transform:translate(-10px,5px);}
+80%{transform:translate(8px,-4px);}
+100%{transform:translate(0);}
+}
+
+.glitch { position:relative; color:#fff; animation:glitch-skew 1s infinite linear alternate-reverse;}
+.glitch::before, .glitch::after{
+content:attr(data-text); position:absolute; top:0; left:0; width:100%; background:transparent;
+}
+.glitch::before{ left:2px; text-shadow:-2px 0 red; }
+.glitch::after{ left:-2px; text-shadow:-2px 0 cyan; }
+
+@keyframes glitch-skew { 0%{transform:skew(0deg);} 50%{transform:skew(2deg);} 100%{transform:skew(-2deg);} }
