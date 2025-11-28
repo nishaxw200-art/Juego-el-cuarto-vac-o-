@@ -1,42 +1,31 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>El Cuarto Vacío — Juego</title>
-<link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Cuarto Vacío</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-<div id="app">
-  <header id="title" class="glitch" data-text="EL CUARTO VACÍO">EL CUARTO VACÍO</header>
+    <div id="game-container" class="fade-in">
+        <h1 class="titulo">EL CUARTO VACÍO</h1>
 
-  <main id="menu" class="screen fade-in">
-    <img src="assets/images/logo.png" id="logo" alt="logo" />
-    <div class="buttons">
-      <button class="menu-btn" id="startBtn">Comenzar</button>
-      <button class="menu-btn" id="creditsBtn">Créditos</button>
+        <img id="scene" src="cuarto vacio.jpeg" class="scene-img zoom-in">
+
+        <p id="text" class="text-box">
+            Te despiertas en un cuarto oscuro... El silencio te incomoda.
+        </p>
+
+        <div id="choices">
+            <button class="btn" onclick="nextScene(1)">Encender la luz</button>
+            <button class="btn" onclick="nextScene(2)">Buscar en la oscuridad</button>
+        </div>
     </div>
-  </main>
 
-  <section id="game" class="screen" style="display:none">
-    <h2 class="blink">Capítulo 1 — El Pasillo</h2>
-    <div id="sceneWrap">
-      <img id="sceneImg" src="assets/images/escena1.png" alt="escena" />
-    </div>
-    <p id="story">Despiertas en un cuarto vacío. El aire huele a humedad.</p>
-    <div class="buttons">
-      <button class="menu-btn" id="nextBtn">Continuar</button>
-      <button class="menu-btn" id="backBtn">Volver al menú</button>
-    </div>
-  </section>
+    <audio id="ambient" src="ambiente.mp3" autoplay loop></audio>
+    <audio id="hit" src="golpe.mp3"></audio>
 
-  <section id="credits" class="screen" style="display:none;">
-    <h3>Créditos</h3>
-    <p>Basado en el libro. Arte y juego generados.</p>
-    <button class="menu-btn" id="backFromCredits">Regresar</button>
-  </section>
-</div>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
