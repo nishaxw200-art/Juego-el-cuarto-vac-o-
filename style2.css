@@ -1,0 +1,65 @@
+/* Fondo general */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: black;
+    color: white;
+    overflow: hidden;
+}
+
+/* Imagen de fondo del cuarto */
+#sceneImage {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+}
+
+/* Texto del juego */
+#textBox {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.65);
+    padding: 20px;
+    font-size: 20px;
+    text-align: center;
+    backdrop-filter: blur(4px);
+    animation: textPop 0.8s ease-out;
+}
+
+/* Botones */
+.choiceButton {
+    background-color: #222;
+    color: white;
+    padding: 12px 20px;
+    margin: 10px;
+    border: 2px solid #555;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.choiceButton:hover {
+    background-color: crimson;
+    border-color: white;
+    transform: scale(1.1);
+}
+
+/* Animación de aparición */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Animación del texto */
+@keyframes textPop {
+    0% { transform: translateY(20px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
